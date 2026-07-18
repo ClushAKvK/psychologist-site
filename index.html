@@ -30,6 +30,7 @@
         <a href="#about">Обо мне</a>
         <a href="#help">С чем можно обратиться</a>
         <a href="#process">Как проходит работа</a>
+        <a href="#pricing">Стоимость</a>
         <a href="#reviews">Отзывы</a>
         <a href="#contacts">Контакты</a>
       </nav>
@@ -426,6 +427,49 @@
       </div>
     </section>
 
+
+    <section class="section section-pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-decor pricing-decor-left" aria-hidden="true"></div>
+      <div class="pricing-decor pricing-decor-right" aria-hidden="true"></div>
+      <div class="container pricing-grid">
+        <div class="pricing-copy reveal">
+          <p class="eyebrow">Условия работы</p>
+          <h2 id="pricing-title">Стоимость консультации</h2>
+          <p>Перед первой встречей мы коротко обсудим ваш запрос, подходящий формат и организационные детали.</p>
+
+          <div class="price-card">
+            <div class="price-card-main">
+              <div>
+                <span class="price-label">Индивидуальная консультация</span>
+                <p>Одна встреча в согласованном формате</p>
+              </div>
+              <!-- Замените значение на актуальную стоимость -->
+              <strong class="price-value">[указать] ₽</strong>
+            </div>
+            <div class="price-meta">
+              <span>[50–60 минут]</span>
+              <span>[онлайн / очно]</span>
+              <span>Конфиденциально</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="blog-card reveal" data-delay="100" aria-labelledby="blog-title">
+          <div class="blog-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21.6 3.4 18.8 20c-.2 1.2-.9 1.5-1.9.9l-4.3-3.2-2.1 2c-.2.2-.4.4-.9.4l.3-4.4 8-7.2c.4-.3-.1-.5-.5-.2l-9.9 6.2-4.3-1.3c-1.2-.4-1.2-1.2.2-1.8L20.1 3c.9-.4 1.7.2 1.5.4Z"/></svg>
+          </div>
+          <p class="eyebrow">Полезные материалы</p>
+          <h3 id="blog-title">Блог психолога в Telegram</h3>
+          <p>Заметки о тревоге, отношениях, внутренних опорах и бережном отношении к себе.</p>
+          <!-- Замените username_blog на адрес Telegram-канала -->
+          <a class="button button-secondary blog-button" href="https://t.me/username_blog" target="_blank" rel="noopener">
+            Перейти в канал
+            <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
+      </div>
+    </section>
+
     <section class="contact-section" id="contacts" aria-labelledby="contact-title">
       <div class="contact-decor contact-decor-left" aria-hidden="true"></div>
       <div class="contact-decor contact-decor-right" aria-hidden="true"></div>
@@ -457,7 +501,10 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="current-year"></span> [Имя психолога]. Все права защищены.</p>
-      <a href="#top">Наверх ↑</a>
+      <div class="footer-links">
+        <a href="https://t.me/username_blog" target="_blank" rel="noopener">Telegram-блог</a>
+        <a href="#top">Наверх ↑</a>
+      </div>
     </div>
   </footer>
 </body>
