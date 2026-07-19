@@ -1005,3 +1005,81 @@ body {
   .footer-links { gap: 16px; }
 }
 
+
+
+/* Content additions: methods, expanded price list and education details */
+.about-methods {
+  margin: 22px 0 0;
+  padding: 18px 20px;
+  border-left: 3px solid rgba(120, 132, 94, .48);
+  border-radius: 0 14px 14px 0;
+  background: rgba(255, 255, 255, .38);
+  color: var(--text-soft);
+  font-size: 14px;
+}
+.about-methods strong { color: var(--text); }
+
+.price-list { display: grid; }
+.price-row {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 28px;
+}
+.price-row + .price-row { border-top: 1px solid var(--line); }
+.price-row-featured {
+  background: linear-gradient(90deg, rgba(231,234,223,.62), rgba(255,255,255,.18));
+}
+.price-row-copy { display: grid; gap: 3px; }
+.price-row-copy strong {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.price-row-copy span {
+  color: var(--text-soft);
+  font-size: 12px;
+}
+.price-row-value {
+  flex: 0 0 auto;
+  color: var(--sage-dark);
+  font-family: var(--serif);
+  font-size: 26px;
+  line-height: 1;
+  white-space: nowrap;
+}
+.diploma-card .diploma-org {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(205, 191, 174, .7);
+  color: var(--text-soft);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+@media (max-width: 620px) {
+  .price-row {
+    min-height: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 22px;
+  }
+  .price-row-value { font-size: 25px; }
+  .about-methods { padding: 16px; }
+}
+.blog-gift {
+  position: relative;
+  z-index: 1;
+  margin: 2px 0 24px;
+  padding: 14px 16px;
+  border: 1px solid rgba(120, 132, 94, .22);
+  border-radius: 14px;
+  background: rgba(255,255,255,.46);
+  color: var(--text-soft);
+  font-size: 13px;
+}
+.blog-gift strong { color: var(--sage-dark); }
