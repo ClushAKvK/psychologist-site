@@ -2,31 +2,44 @@
   const menuButton = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.main-nav');
 
-  const closeMenu = () => {
+  const setMenuState = (isOpen) => {
     if (!menuButton || !menu) return;
-    menuButton.setAttribute('aria-expanded', 'false');
-    menuButton.setAttribute('aria-label', 'Открыть меню');
-    menu.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
+
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    menu.classList.toggle('is-open', isOpen);
+    document.documentElement.classList.toggle('menu-open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+
+    if (isOpen) {
+      menu.scrollTop = 0;
+    }
   };
 
+  const closeMenu = () => setMenuState(false);
+
   if (menuButton && menu) {
-    menuButton.addEventListener('click', () => {
+    menuButton.addEventListener('click', (event) => {
+      event.preventDefault();
       const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!isOpen));
-      menuButton.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
-      menu.classList.toggle('is-open', !isOpen);
-      document.body.classList.toggle('menu-open', !isOpen);
+      setMenuState(!isOpen);
     });
 
-    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1060) closeMenu();
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', closeMenu);
     });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1060 && menuButton.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+      }
+    });
+
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') closeMenu();
     });
   }
+
 
   document.querySelectorAll('[data-slider-prev], [data-slider-next]').forEach((button) => {
     button.addEventListener('click', () => {
