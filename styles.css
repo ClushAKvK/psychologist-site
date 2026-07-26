@@ -920,9 +920,6 @@ body {
   text-align: center;
 }
 .price-meta span + span { border-left: 1px solid var(--line); }
-.price-meta span:last-child {
-  display: none;
-}
 
 .blog-card {
   position: relative;
@@ -1061,6 +1058,9 @@ body {
     justify-content: flex-start;
     text-align: left;
     padding-inline: 22px;
+  }
+  .price-meta span:last-child {
+    display: none;
   }
   .blog-card { min-height: 330px; padding: 28px 24px; }
   .blog-button { width: 100%; }
