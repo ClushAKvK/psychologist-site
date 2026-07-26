@@ -920,6 +920,9 @@ body {
   text-align: center;
 }
 .price-meta span + span { border-left: 1px solid var(--line); }
+.price-meta span:last-child {
+  display: none;
+}
 
 .blog-card {
   position: relative;
