@@ -1392,3 +1392,442 @@ body {
     justify-self: stretch;
   }
 }
+
+/* Real contacts, blog channels, diploma scans and long client reviews */
+.blog-platforms {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.blog-platform {
+  position: relative;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 13px;
+  min-height: 76px;
+  padding: 14px 16px;
+  border: 1px solid rgba(120,132,94,.2);
+  border-radius: 18px;
+  background: rgba(255,255,255,.68);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(74,65,57,.055);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.blog-platform:hover,
+.blog-platform:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(120,132,94,.42);
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 16px 34px rgba(74,65,57,.09);
+}
+
+.blog-platform-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--sage-soft);
+  color: var(--sage-dark);
+}
+
+.blog-platform-icon svg {
+  width: 23px;
+  height: 23px;
+  fill: currentColor;
+}
+
+.blog-platform-icon-max {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.blog-platform strong,
+.blog-platform small {
+  display: block;
+}
+
+.blog-platform strong {
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.blog-platform small {
+  color: var(--text-soft);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.blog-platform-arrow {
+  color: var(--sage-dark);
+  font-size: 18px;
+}
+
+.blog-gift {
+  margin-top: 20px !important;
+  padding-top: 18px;
+  border-top: 1px solid rgba(120,132,94,.18);
+}
+
+.diploma-photo-slider {
+  grid-auto-columns: minmax(420px, 1fr);
+  align-items: stretch;
+}
+
+.diploma-photo-card {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #eee8df;
+  box-shadow: var(--shadow-soft);
+  color: var(--text);
+  text-decoration: none;
+  isolation: isolate;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.diploma-photo-card:hover,
+.diploma-photo-card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+}
+
+.diploma-photo-card img {
+  width: 100%;
+  height: 285px;
+  display: block;
+  object-fit: contain;
+  padding: 16px;
+  background:
+    radial-gradient(circle at 85% 14%, rgba(255,255,255,.8), transparent 26%),
+    linear-gradient(145deg, #f8f5ef, #e9e2d8);
+}
+
+.diploma-photo-caption {
+  display: block;
+  min-height: 76px;
+  padding: 16px 108px 16px 18px;
+  background: rgba(255,255,255,.9);
+}
+
+.diploma-photo-caption strong,
+.diploma-photo-caption small {
+  display: block;
+}
+
+.diploma-photo-caption strong {
+  margin-bottom: 5px;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.diploma-photo-caption small {
+  color: var(--text-soft);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.diploma-open {
+  position: absolute;
+  right: 16px;
+  bottom: 17px;
+  z-index: 2;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--sage-soft);
+  color: var(--sage-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.diploma-hint {
+  margin: 2px 4px 0;
+  color: var(--text-soft);
+  font-size: 12px;
+}
+
+.reviews-slider-full {
+  grid-auto-columns: minmax(430px, .92fr);
+  align-items: stretch;
+}
+
+.review-card-full {
+  min-height: 100%;
+  padding: 34px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(231,234,223,.78), transparent 25%),
+    rgba(255,255,255,.68);
+  box-shadow: 0 12px 34px rgba(73,64,56,.055);
+}
+
+.review-label {
+  align-self: flex-start;
+  margin: 0 0 18px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--sage-soft);
+  color: var(--sage-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.review-text {
+  display: grid;
+  gap: 14px;
+}
+
+.review-text p {
+  margin: 0;
+  color: #57514a;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.contact-inner {
+  max-width: 980px;
+}
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.contact-channel {
+  position: relative;
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 15px;
+  min-height: 92px;
+  padding: 18px 20px;
+  border: 1px solid rgba(133,113,90,.18);
+  border-radius: 20px;
+  background: rgba(255,255,255,.62);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(76,65,55,.055);
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.contact-channel:hover,
+.contact-channel:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(120,132,94,.4);
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 18px 38px rgba(76,65,55,.09);
+}
+
+.contact-channel-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 17px;
+  background: var(--sage-soft);
+  color: var(--sage-dark);
+}
+
+.contact-channel-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-channel-telegram .contact-channel-icon svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-channel-icon-max,
+.contact-channel-icon-b17 {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.contact-channel-whatsapp .contact-channel-icon {
+  background: rgba(222,234,218,.95);
+}
+
+.contact-channel-max .contact-channel-icon {
+  background: rgba(230,225,239,.85);
+}
+
+.contact-channel-b17 .contact-channel-icon {
+  background: rgba(238,226,210,.9);
+}
+
+.contact-channel-copy strong,
+.contact-channel-copy small {
+  display: block;
+}
+
+.contact-channel-copy strong {
+  margin-bottom: 4px;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contact-channel-copy small {
+  color: var(--text-soft);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.contact-channel-arrow {
+  color: var(--sage-dark);
+  font-size: 20px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+@media (max-width: 900px) {
+  .blog-platforms,
+  .contact-channels {
+    grid-template-columns: 1fr;
+  }
+
+  .diploma-photo-slider {
+    grid-auto-columns: minmax(370px, 86%);
+  }
+
+  .reviews-slider-full {
+    grid-auto-columns: minmax(390px, 88%);
+  }
+}
+
+@media (max-width: 620px) {
+  .blog-platforms {
+    gap: 10px;
+  }
+
+  .blog-platform {
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+    min-height: 72px;
+    padding: 13px 14px;
+  }
+
+  .diploma-photo-slider {
+    grid-auto-columns: 91%;
+  }
+
+  .diploma-photo-card {
+    min-height: 300px;
+    border-radius: 18px;
+  }
+
+  .diploma-photo-card img {
+    height: 230px;
+    padding: 10px;
+  }
+
+  .diploma-photo-caption {
+    min-height: 92px;
+    padding: 14px 16px 42px;
+  }
+
+  .diploma-open {
+    left: 16px;
+    right: auto;
+    bottom: 12px;
+  }
+
+  .reviews-slider-full {
+    grid-auto-columns: 94%;
+  }
+
+  .review-card-full {
+    padding: 26px 22px;
+  }
+
+  .review-text p {
+    font-size: 13px;
+    line-height: 1.68;
+  }
+
+  .contact-channel {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    min-height: 84px;
+    padding: 15px 16px;
+  }
+
+  .contact-channel-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+  }
+
+  .contact-channel-copy strong {
+    font-size: 18px;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+}
+
+/* Reviews keep their natural height even when neighbouring testimonials are longer. */
+.reviews-slider-full {
+  align-items: start;
+}
+
+.review-card-full {
+  min-height: 0;
+  height: auto;
+  align-self: start;
+}
+
+@media (max-width: 620px) {
+  .reviews-slider-full {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    grid-auto-columns: auto;
+    gap: 16px;
+    overflow-x: visible;
+    padding-inline: 0;
+    scroll-snap-type: none;
+  }
+
+  .reviews-slider-full .review-card-full {
+    width: 100%;
+  }
+
+  .section-reviews .slider-controls {
+    display: none;
+  }
+}
