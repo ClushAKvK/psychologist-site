@@ -1834,3 +1834,115 @@ body {
     display: none;
   }
 }
+
+/* Package discount offer */
+.package-offer {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 17px 20px;
+  overflow: hidden;
+  border: 1px solid rgba(120, 132, 94, .28);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 96% 10%, rgba(255, 255, 255, .82), transparent 34%),
+    linear-gradient(120deg, rgba(231, 234, 223, .88), rgba(248, 243, 235, .92));
+  box-shadow: 0 16px 38px rgba(63, 70, 52, .08);
+}
+
+.package-offer::after {
+  content: "";
+  position: absolute;
+  right: -32px;
+  bottom: -46px;
+  width: 118px;
+  height: 92px;
+  border: 1px solid rgba(120, 132, 94, .14);
+  border-radius: 55% 45% 62% 38%;
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+.package-offer-badge {
+  position: relative;
+  z-index: 1;
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sage-dark);
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 10px 24px rgba(79, 91, 60, .18);
+}
+
+.package-offer-copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 4px;
+}
+
+.package-offer-copy strong {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.package-offer-copy span {
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.package-offer-note {
+  position: relative;
+  z-index: 1;
+  padding: 8px 12px;
+  border: 1px solid rgba(120, 132, 94, .22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .52);
+  color: var(--sage-dark);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .package-offer {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 13px 14px;
+    padding: 16px;
+  }
+
+  .package-offer-badge {
+    width: 54px;
+    height: 54px;
+    font-size: 18px;
+  }
+
+  .package-offer-copy strong {
+    font-size: 18px;
+  }
+
+  .package-offer-copy span {
+    font-size: 12px;
+  }
+
+  .package-offer-note {
+    grid-column: 2;
+    justify-self: start;
+    padding: 7px 10px;
+    white-space: normal;
+  }
+}
+
